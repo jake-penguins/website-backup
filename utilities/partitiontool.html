@@ -1,30 +1,69 @@
-<html class="no-js" lang="">
+<html class="no-js" lang="eng">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>IEC Data Converter</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<!--[if lt IE 8]>
+            <div class="container"><div class="alert alert-warning" role="alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div></div>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <br>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>IEC Data Converter</h1>
+				<p>This tool was created to assist myself in partitioning my hard drive (since GParted uses gibibytes instead of gigabytes). It will convert to and from gigabytes, gibibytes, megabytes, and mebibytes.</p>
+			</div>
+				<div class="row">
+					<div class="col-md-6">
+						<h4>Gigabytes</h4>
+						<p><div class="input-group">
+							<input type="number" class="form-control" min="0" id="gigabytes">
+							<span class="input-group-btn"><button class="btn btn-default" type="button" onClick="convert_gigabytes()">Convert</button></span>
+						</div></p>
+					</div>
+					<div class="col-md-6">
+						<h4>Gibibytes</h4>
+						<p><div class="input-group">
+							<input type="number" class="form-control" min="0" id="gibibytes">
+							<span class="input-group-btn"><button class="btn btn-default" type="submit" onClick="convert_gibibytes()">Convert</button></span>
+						</div></p>
+					</div>
+				</div>
+			<div class="row">
+				<p><div class="col-md-6">
+					<h4>Megabytes</h4>
+					<div class="input-group">
+						<input type="number" class="form-control" min="0" id="megabytes">
+						<span class="input-group-btn"><button class="btn btn-default" type="submit" onClick="convert_megabytes()">Convert</button></span>
+					</div></p>
+				</div>
+				<p><div class="col-md-6">
+					<h4>Mebibytes</h4>
+					<div class="input-group">
+						<input type="number" class="form-control" min="0" id="mebibytes">
+						<span class="input-group-btn"><button class="btn btn-default" type="submit" onClick="convert_mebibytes()">Convert</button></span>
+					</div></p>
+				</div>
+			</div>
+			
+			
+		</div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+		<script type="text/Javascript" src="js/partitiontool.js"></script>
+        
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
